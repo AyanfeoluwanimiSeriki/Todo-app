@@ -1,0 +1,387 @@
+    html, 
+    body { 
+        margin: 0; 
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+    *{ 
+    box-sizing: border-box;
+    }
+    img { 
+        max-width: 100%;
+    } 
+    .flex-row {
+        display: flex; 
+        flex-flow: row nowrap; 
+        align-items: center; 
+    }
+
+
+
+    body.theme-dark .add-new-item input,
+    body.theme-dark .content ul li {
+        background-color: #333;
+        /* border-radius: 10px; */
+        color: #ffffff;
+        border: 1px solid #444;
+        background: hsl(235, 24%, 19%); 
+        height: 65px;
+        /* border-radius: 10px;  */
+        /* margin: 0 0 5px; */
+        /* padding: 0 26px; */
+        position: relative;
+    }
+    body.theme-light .add-new-item input,
+    body.theme-light .content ul li {
+        /* background-color: #333; */
+        /* border-radius: 10px; */
+        color: black;
+        border: 1px solid #444;
+        background: white; 
+        height: 65px;
+        /* border-radius: 10px; */
+        /* margin: 0 0 5px; */
+        /* padding: 0 26px; */
+        position: relative;
+    }
+
+    body.theme-light .add-new-item {
+        background-color: white;
+        color: black;
+        border: 1px solid white;
+    }
+    body.theme-light .bottom-items {
+        background-color: white;
+        color: black;
+        border: 1px solid white;
+    }
+
+    /* Light Theme */
+    body.theme-light {
+        background-color: #f5f5f5;
+        color: black;
+        background-image: url(images/bg-desktop-light.jpg);
+    }
+    /* body.theme-light h1{
+
+    } */
+    body.theme-light .add-new-item input,
+    body.theme-light .content ul li {
+        background-color: #ffffff;
+        /* color: #000000; */
+        border: 1px solid #ddd;
+    }
+
+    /* Theme icon styling */
+    .theme-block label img {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Light Theme */
+    /* body.theme-light {
+        background-color:;
+        color: #333333;
+    } */
+    
+    .theme-block label {
+        cursor: pointer;
+    }
+    
+    .theme-dark{
+        --bg-top-image: url(images/bg-desktop-dark.jpg) no-repeat;
+        --main-bg: hsl(235, 21%, 11%);
+        --todo-bg: hsl(235, 24%, 19%);
+        --todo-shadow: hsl(235, 21%, 11%);
+        --font-color: hsl(234, 39%, 85%);
+        --font-color-hover: #fff;
+    }
+    .theme-light{
+        --bg-top-image: 0 0 url(images/bg-desktop-light.jpg) no-repeat;
+        --main-bg: hsl(0, 0%, 98%);
+        --todo-bg: hsl(0, 0%, 98%);
+        --todo-shadow: hsl(235, 19%, 35%);
+        --font-color: hsl(236, 9%, 61%);
+        --font-color-hover: hsl(235, 21%, 11%);
+        background-color: var(--main-bg);
+        background-image: 0 0 url(images/bg-desktop-light.jpg) no-repeat;
+    }
+
+    :root{
+        --Very-Light-Gray: hsl(0, 0%, 98%);
+        --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+        --Light-Grayish-Blue: hsl(233, 11%, 84%);
+        --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+        --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+        --Very-Dark-Blue: hsl(235, 21%, 11%);
+        --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+        --Light-Grayish-Blue: hsl(234, 39%, 85%);
+        --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+        --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+        --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+        --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+
+    }
+    body{
+        font: 400 18px/1 "Josefin Sans", sans-serf; 
+        background: url(images/bg-desktop-dark.jpg) no-repeat;
+        background-color:  hsl(235, 21%, 11%);
+        background-size: contain;
+        color:  hsl(234, 39%, 85%);
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+    header,
+    main {
+        max-width: 550px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    header{
+        justify-content: space-between;
+        /* align-items: center; */
+        /* margin-top: 80px; */
+    }
+    h1{
+        font-weight: 700;
+        font-size: 2.5rem;
+        color: #fff;
+        letter-spacing: 8px;
+    }
+    .theme-block{
+        margin: -10px 0 0;
+    }
+    .theme-block #theme{
+        display: none;
+    }
+    .theme-block #theme + label::before {
+        content: "";
+        background: url(images/icon-sun.svg);
+        display: block;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+    }
+    .theme-block #theme:checked + label::before {
+        content: "";
+        background: url(images/icon-moon.svg);
+        display: block;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+    }
+    .add-new-item{
+        background: hsl(235, 24%, 19%); 
+        height: 65px;
+        border-radius: 10px;
+        margin: 0 0 24px;
+        padding: 0 26px;
+        position: relative;
+    }
+    body.theme-light .add-new-item{
+        background: white; 
+        height: 65px;
+        /* border-radius: 10px; */
+        margin: 0 0 24px;
+        padding: 0 26px;
+        position: relative;
+    }
+    .add-new-item #addItem{
+        background: transparent;
+        color: hsl(236, 9%, 61%);
+        border: 0;
+        outline: 0;
+        font: 400 18px/1 "Josefin Sans", sans-serf; 
+        margin: 4px 0 0 47px;
+        letter-spacing: -0.3px;
+    }
+    .add-new-item span{
+        width: 25px;
+        height: 25px;
+        border: 1px solid hsl(236, 9%, 61%);
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        left: 26px;
+        top: 21px;
+        cursor: pointer;
+    }
+    .add-new-item span:hover{
+        background: center url(images/icon-check.svg) no-repeat,
+        linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    }
+    .content{
+        background: hsl(235, 24%, 19%); 
+        border-radius: 10px;
+        box-shadow: 0 42px 30px -9px hsl(235, 21%, 11%);
+        
+    }
+    body.theme-light .content{
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 42px 30px -9px white;
+    }
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .theme-dark ul li{
+        padding: 0 10px 0 25px;
+        min-height: 65px;
+        border-bottom: 1px solid var(--Very-Light-Gray); 
+        position: relative;
+    }
+    body.theme-light ul li{
+        padding: 0 10px 0 25px;
+        min-height: 65px;
+        /* border-bottom: 7px solid blue; */
+        position: relative;
+    }
+    /* body.theme-light ul li{
+        padding: 0 10px 0 25px;
+        min-height: 65px;
+        border-bottom: 5px solid black;
+        position: relative;
+    } */
+    ul li input[type="checkbox"]{
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        width: 0;
+        height: 0;
+    }
+    ul li label{
+        position: relative;
+        cursor: pointer;
+        padding: 2px 0 0 48px;
+        font-size: 1.1rem;
+    }
+    .checkmark{
+        position: absolute;
+        top: -5px;
+        left: 0;
+        height: 25px;
+        width: 25px;
+    }
+    ul li.hidden{
+        display: none;
+    }
+    ul li input[type="checkbox"] ~ .checkmark{
+        border: 1px solid hsl(234, 39%, 85%);
+        border-radius: 50px;
+    }
+    ul li input[type="checkbox"] ~ .checkmark:hover{
+        border: 0;
+        padding: 1px;
+        background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    }
+    ul li input[type="checkbox"] ~ .checkmark:hover::before{
+        content: "";
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        background: hsl(235, 24%, 19%);
+        display: block;
+    }
+    body.theme-light ul li input[type="checkbox"] ~ .checkmark:hover::before{
+        content: "";
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        background: white;
+        display: block;
+    }
+    ul li input[type="checkbox"]:checked ~ .checkmark{
+        background: center url(images/icon-check.svg) no-repeat,
+        linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    }
+    ul li input[type="checkbox"]:checked ~ .text{
+        text-decoration: line-through;
+    }
+    .remove{
+        background: url(images/icon-cross.svg) no-repeat;
+        width: 18px;
+        height: 18px;
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+    }
+    ul li:hover .remove{
+        display: block;
+    }
+    .items-left{
+        margin-right: 86px;
+        
+    }
+    .bottom-items{
+        padding: 20px 20px 20px 27px;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+        align-items: baseline;
+        border-radius: 5px;
+        background: hsl(235, 24%, 19%);  
+    }
+    body.theme-light .bottom-items{
+        background-color: white;
+    }
+    .filter{
+        margin-right: 47px;
+    }
+    .filter input[type="radio"]{
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    .filter label{
+        cursor: pointer;
+        padding: 0 10px;
+    }
+    .filter label:hover{
+        color: #fff;
+    }
+    body.theme-light .filter label:hover {
+        color: var(--Light-Grayish-Blue-hover);
+    }
+    .filter input[type="radio"]:checked ~ span {
+        color: hsl(221, 62%, 52%);
+    }
+    .clear{
+        color: hsl(234, 39%, 85%);
+        cursor: pointer;
+    }
+    .clear:hover{
+        color: #fff;
+    }
+    body.theme-light .clear:hover{
+        color: var(--Light-Grayish-Blue-hover);
+    }
+
+    @media (max-width:900px){
+        body{
+            width: 100%;
+            display: block;
+            padding: 10px;
+            overflow: hidden;
+            
+        }
+        header,
+        main {
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .clear{
+        display: none;
+    }
+
+    }
